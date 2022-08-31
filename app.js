@@ -53,7 +53,7 @@ app.use(function(err, req, res, next) {
 const storage = multer.diskStorage({ destination: 'public/file', filename: (req, file, cb) => cb(null, makeid(10) + path.extname(file.originalname)) })
 const upload = multer({ storage, limits: { fileSize: 10000000 }}) // 10 MB
 
-
+app.get('/', (req, res) => res.send('WELCOME TO BABASAPI'));
 
 
 // RemoveBG
